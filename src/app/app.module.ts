@@ -5,9 +5,10 @@ import {AppComponent} from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import {BoardsComponent} from './boards/boards/boards.component';
 import {HttpClientModule} from '@angular/common/http';
-import {TextEntriesComponent} from './text-entries/text-entries.component';
+import {TextEntriesComponent} from './text-entries/containers/text-entries/text-entries.component';
 import {AppRoutingModule} from './routing/app-routing.module';
 import {BoardsModule} from './boards/boards.module';
+import {TextEntriesModule} from './text-entries/text-entries.module';
 
 const routes: Routes = [
   {
@@ -32,14 +33,14 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TextEntriesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     BoardsModule,
+    TextEntriesModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],
