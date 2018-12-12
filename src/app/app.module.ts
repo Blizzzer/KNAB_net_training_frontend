@@ -2,12 +2,12 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {AppRoutingModule} from './/app-routing.module';
 import {RouterModule, Routes} from '@angular/router';
-import {BoardsComponent} from './boards/boards.component';
+import {BoardsComponent} from './boards/boards/boards.component';
 import {HttpClientModule} from '@angular/common/http';
-import {BoardItemComponent} from './boards/board-item/board-item.component';
 import {TextEntriesComponent} from './text-entries/text-entries.component';
+import {AppRoutingModule} from './routing/app-routing.module';
+import {BoardsModule} from './boards/boards.module';
 
 const routes: Routes = [
   {
@@ -33,14 +33,13 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    BoardsComponent,
-    BoardItemComponent,
     TextEntriesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    BoardsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],
