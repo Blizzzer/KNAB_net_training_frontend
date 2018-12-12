@@ -12,4 +12,8 @@ export class SendTextComponent implements OnInit {
   ngOnInit() {
   }
 
+  sendText(){
+
+  }
+
 }
