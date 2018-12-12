@@ -23,4 +23,8 @@ export class TextEntriesService {
       .toPromise()
       .then((list: BoardModel[]) => list.find((board: BoardModel) => board.id === boardId));
   }
+
+  postTextEntry(textEntry: TextEntryModel) {
+    return this.http.post<TextEntryModel>(serverAddress + '/text', textEntry).toPromise();
+  }
 }

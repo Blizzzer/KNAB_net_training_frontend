@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {TextEntryModel} from '../../models/text_entry.model';
 
 @Component({
   selector: 'app-send-text',
@@ -6,14 +7,15 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./send-text.component.css']
 })
 export class SendTextComponent implements OnInit {
-  @Output() send: EventEmitter<void>;
+  @Output() send: EventEmitter<TextEntryModel> = new EventEmitter();
+  textEntry = new TextEntryModel();
   constructor() { }
 
   ngOnInit() {
   }
 
-  sendText(){
-
+  sendText() {
+    this.send.emit(this.textEntry);
   }
 
 }

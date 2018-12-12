@@ -6,7 +6,7 @@
     <app-entries-list [list]="list" *ngIf="list"></app-entries-list>
   </div>
   <div class="card-footer">
-    <app-send-text></app-send-text>
+    <app-send-text (send)="sendText($event)"></app-send-text>
   </div>
 </div>
 

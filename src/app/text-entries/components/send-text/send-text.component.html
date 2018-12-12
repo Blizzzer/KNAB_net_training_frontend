@@ -2,8 +2,8 @@
   <div class="input-group-prepend">
     <span class="input-group-text">Author</span>
   </div>
-  <input type="text" class="form-control">
+  <input [(ngModel)]="textEntry.author" class="form-control" type="text">
 </div>
-<textarea class="form-control"></textarea>
+<textarea class="form-control" [(ngModel)]="textEntry.text"></textarea>
 <button type="button" class="btn btn-secondary" (click)="sendText()">Send</button>
 

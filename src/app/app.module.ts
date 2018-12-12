@@ -9,6 +9,7 @@ import {TextEntriesComponent} from './text-entries/containers/text-entries/text-
 import {AppRoutingModule} from './routing/app-routing.module';
 import {BoardsModule} from './boards/boards.module';
 import {TextEntriesModule} from './text-entries/text-entries.module';
+import {FormsModule} from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -41,6 +42,7 @@ const routes: Routes = [
     AppRoutingModule,
     BoardsModule,
     TextEntriesModule,
+    FormsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],
