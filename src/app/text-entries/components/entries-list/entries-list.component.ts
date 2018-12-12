@@ -11,6 +11,7 @@ export class EntriesListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.list);
   }
 
 }

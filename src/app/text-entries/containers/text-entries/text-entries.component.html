@@ -1,8 +1,14 @@
-<p>
-  text-entries works!
-</p>
+<div class="card text-white bg-primary" style="margin-top: 5%; margin-left: 5%; margin-right: 5%">
+  <div class="card-header d-flex">
+    <h1 *ngIf="board" class="card-title mx-auto mt-3">{{board.name}}</h1>
+  </div>
+  <div class="card-body">
+    <app-entries-list [list]="list" *ngIf="list"></app-entries-list>
+  </div>
+  <div class="card-footer">
+    <app-send-text></app-send-text>
+  </div>
+</div>
 
-<app-board-info [board]="board" *ngIf="board"></app-board-info>
-<app-entries-list [list]="list" *ngIf="list"></app-entries-list>
-<app-send-text></app-send-text>
+
 

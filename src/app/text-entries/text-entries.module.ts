@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {TextEntriesComponent} from './containers/text-entries/text-entries.component';
-import { BoardInfoComponent } from './components/board-info/board-info.component';
 import { EntriesListComponent } from './components/entries-list/entries-list.component';
 import { SendTextComponent } from './components/send-text/send-text.component';
 
@@ -11,7 +10,6 @@ import { SendTextComponent } from './components/send-text/send-text.component';
   ],
   declarations: [
     TextEntriesComponent,
-    BoardInfoComponent,
     EntriesListComponent,
     SendTextComponent
   ]

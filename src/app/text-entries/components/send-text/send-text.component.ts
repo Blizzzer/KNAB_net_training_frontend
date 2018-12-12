@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-send-text',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./send-text.component.css']
 })
 export class SendTextComponent implements OnInit {
-
+  @Output() send: EventEmitter<void>;
   constructor() { }
 
   ngOnInit() {

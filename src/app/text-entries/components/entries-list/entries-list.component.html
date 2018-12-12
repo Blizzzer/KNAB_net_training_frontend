@@ -1,3 +1,10 @@
-<p>
-  entries-list works!
-</p>
+<div class="d-flex">
+  <div class="card mx-auto text-dark" style="width: 70%;">
+    <div class="card-header d-flex">
+      <h5 class="card-title mx-auto">Recent Entries</h5>
+    </div>
+    <div class="card-body" *ngFor="let entry of list">
+      <span class="badge badge-secondary">{{entry.author}}</span> {{entry.text}}
+    </div>
+  </div>
+</div>
